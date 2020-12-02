@@ -19,9 +19,17 @@ setInterval(countUp, 1000);
     let button = document.querySelector("#pause")
     if (button.textContent == " pause ") {
       button.textContent = " resume "
+      document.getElementById("plus").disabled = true
+      document.getElementById("minus").disabled = true
+      document.getElementById("heart").disabled = true
+      document.getElementById("submit").disabled = true
     }
     else {
       button.textContent = " pause "
+      document.getElementById("plus").disabled = false
+      document.getElementById("minus").disabled = false
+      document.getElementById("heart").disabled = false
+      document.getElementById("submit").disabled = false
     event.preventDefault()
     }
   });
