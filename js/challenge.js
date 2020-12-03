@@ -58,7 +58,8 @@ setInterval(countUp, 1000);
 const likesUl = document.querySelector("ul.likes");
   document.querySelector("#heart").addEventListener("click", function(event){
     let li = document.createElement("li");
-    let number = (parseInt(counter.textContent));
+    let number = 0
+    number = (parseInt(counter.textContent));
     likedNumbers.push(parseInt(counter.textContent));
 
 //function to get count of times a number has been liked
