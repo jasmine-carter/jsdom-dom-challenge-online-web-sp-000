@@ -56,7 +56,7 @@ const likesUl = document.querySelector("ul.likes")
     likedNumbers.push(parseInt(counter.textContent))
     let counts = {}
     if likedNumbers.includes(parseInt(counter.textContent)) {
-      li.textContent = `${counter.textContent} has been liked ${counts[num]} times`
+      li.textContent = `${counter.textContent} has been liked 1 times`
       likesUl.appendChild(li);
     } else {
       li.textContent = `${counter.textContent} has been liked 1 time`
