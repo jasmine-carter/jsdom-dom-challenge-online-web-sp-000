@@ -58,8 +58,9 @@ const likesUl = document.querySelector("ul.likes");
   document.querySelector("#heart").addEventListener("click", function(event){
     let likedNumbers = []
     let li = document.createElement("li");
+    let number = (parseInt(counter.textContent);
     likedNumbers.push(parseInt(counter.textContent));
-    
+
     function likedCounter(number) {
   	let count = 0
   	for (i = 0; i < likedNumbers.length; i ++ ) {
