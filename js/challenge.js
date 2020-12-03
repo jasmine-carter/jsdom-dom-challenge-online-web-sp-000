@@ -78,7 +78,7 @@ const likesUl = document.querySelector("ul.likes");
       //it updates an existing li if one exists for the current liked number
       document.getElementById(`${number}`).textContent = `${counter.textContent} has been liked ${likes} times`;
     } else {
-      //it creates a new li
+      //it creates a new li if liked number is new
       li.textContent = `${counter.textContent} has been liked 1 time`;
       li.setAttribute("id", number);
       likesUl.appendChild(li);
