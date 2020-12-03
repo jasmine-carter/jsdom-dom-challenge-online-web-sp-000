@@ -6,7 +6,7 @@ function countUp () {
     //let counter = document.getElementById("counter")
     let c = parseInt(counter.textContent);
     c = c+1;
-    let counter.textContent = c;
+    counter.textContent = c;
   }
 }
 setInterval(countUp, 1000);
