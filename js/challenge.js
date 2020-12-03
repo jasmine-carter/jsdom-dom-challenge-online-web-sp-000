@@ -80,7 +80,7 @@ const likesUl = document.querySelector("ul.likes");
     let likes = likedCounter(number)
     if (likes > 1 && ) {
       li.textContent = `${counter.textContent} has been liked ${likes} times`;
-      li.setAttribute("id", number)
+      li.setAttribute("id", number);
       likesUl.appendChild(li);
     } else {
       li.textContent = `${counter.textContent} has been liked 1 time`;
