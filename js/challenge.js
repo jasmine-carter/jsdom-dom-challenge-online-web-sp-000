@@ -47,6 +47,7 @@ setInterval(countUp, 1000);
 	}
 	return count
 	}
+  let likes =likedCounter(number)
 // a like button that adds a like for the number that is currently displayed by the timer
 // it needs to know what the counter is at
 // it needs to create a new li
