@@ -4,9 +4,9 @@ document.addEventListener("DOMContentLoaded", () => {
 function countUp () {
   if (document.querySelector("#pause").textContent == " pause ") {
     //let counter = document.getElementById("counter")
-    c = parseInt(counter.textContent);
-    c = c+1 ;
-    counter.textContent = c ;
+    let c = parseInt(counter.textContent);
+    let c = c+1 ;
+    let counter.textContent = c ;
   }
 }
 setInterval(countUp, 1000);
