@@ -48,13 +48,8 @@ setInterval(countUp, 1000);
 	}
 	return count;
 }
-// a like button that adds a like for the number that is currently displayed by the timer
-// it needs to know what the counter is at
-// it needs to create a new li
-// the li needs to have the value of `${counter.textContent} has been likd ${x} time`
-//needs to store the unique number
-//needs to increment the unique number's like by one every time
 
+//logic to add likes li for each number liked
 const likesUl = document.querySelector("ul.likes");
   document.querySelector("#heart").addEventListener("click", function(event){
     let li = document.createElement("li");
@@ -62,7 +57,7 @@ const likesUl = document.querySelector("ul.likes");
     number = (parseInt(counter.textContent));
     likedNumbers.push(parseInt(counter.textContent));
 
-//function to get count of times a number has been liked
+    //function to get count of times a number has been liked
     function likedCounter(number) {
   	let count = 0
     let i;
