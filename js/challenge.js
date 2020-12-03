@@ -78,12 +78,13 @@ const likesUl = document.querySelector("ul.likes");
 //else create new li
 
     let likes = likedCounter(number)
-    if (likes > 1) {
-      li.textContent = `${counter.textContent} has been liked ${likes} times`;
-      //li.setAttribute("id", number);
-      likesUl.appendChild(li);
+    if (likes > 1 && likedNumbers.includes(number)) {
+      //it updates an existing li
+      document.getElementById(`${number}`).textContent = `${counter.textContent} has been liked ${likes} times`;
     } else {
+      //it creates a new li
       li.textContent = `${counter.textContent} has been liked 1 time`;
+      //li.setAttribute("id", number);
       likesUl.appendChild(li);
     }
   });
