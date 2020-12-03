@@ -48,8 +48,10 @@ setInterval(countUp, 1000);
 // the li needs to have the value of `${counter.textContent} has been likd ${x} time`
 //if distinct number has been liked > 1 time, $times else $time
 // the li needs to get appended to the ul class "likes"
+//need to know the number that is liked, and store it in an array
 
 const likesUl = document.querySelector("ul.likes")
+  let unique_number = []
   document.querySelector("#heart").addEventListener("click", function(event){
     let li = document.createElement("li")
     li.textContent = `${counter.textContent} has been liked 1 time`
