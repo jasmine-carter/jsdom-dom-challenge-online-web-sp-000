@@ -39,13 +39,13 @@ setInterval(countUp, 1000);
   });
 //function to count likedNumbers for heart action
 	function likedCounter(number) {
-	let count = 0
+	let count = 0;
 	for (i = 0; i < likedNumbers.length; i ++ ) {
 		if (number == likedNumbers[i]) {
 		count += 1;
 		}
 	}
-	return count
+	return count;
 }
 // a like button that adds a like for the number that is currently displayed by the timer
 // it needs to know what the counter is at
@@ -64,6 +64,7 @@ const likesUl = document.querySelector("ul.likes");
 //function to get count of times a number has been liked
     function likedCounter(number) {
   	let count = 0
+    let i;
   	for (i = 0; i < likedNumbers.length; i ++ ) {
   		if (number == likedNumbers[i]) {
   		count += 1;
@@ -74,11 +75,11 @@ const likesUl = document.querySelector("ul.likes");
 
     let likes = likedCounter(number)
     if (likes > 1) {
-      li.textContent = `${counter.textContent} has been liked ${likes} times`
+      li.textContent = `${counter.textContent} has been liked ${likes} times`;
       likesUl.appendChild(li);
     } else {
-      li.textContent = `${counter.textContent} has been liked 1 time`
+      li.textContent = `${counter.textContent} has been liked 1 time`;
       likesUl.appendChild(li);
     }
-  })
+  });
 });
