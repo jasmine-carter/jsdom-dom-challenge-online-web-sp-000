@@ -36,6 +36,7 @@ document.querySelector("#submit").addEventListener("click", function(event){
   const list = document.getElementById("list")
   let input = document.getElementById("comment-input").values
   p.textContent = input
+  list.appendChild(p)
   event.preventDefault()
 });
 //it needs to create an p, the append it to parent with content from form
