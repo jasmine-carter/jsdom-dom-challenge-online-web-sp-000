@@ -72,12 +72,10 @@ const likesUl = document.querySelector("ul.likes");
   	}
   	return count
   }
-
+    let likes = likedCounter(number)
 //if UL has an li with id that == likes
 //update li with matching id text content
 //else create new li
-
-    let likes = likedCounter(number)
     if (likes > 1 && likedNumbers.includes(number)) {
       //it updates an existing li
       document.getElementById(`${number}`).textContent = `${counter.textContent} has been liked ${likes} times`;
