@@ -9,12 +9,8 @@ function countUp () {
     counter.textContent = c ;
   }
 }
-
 setInterval(countUp, 1000);
-
-
 //if clicked on pause, button text changes to resume and countUp stops
-
   document.querySelector("#pause").addEventListener("click", function(event){
     let button = document.querySelector("#pause");
     if (button.textContent == " pause ") {
@@ -41,7 +37,16 @@ setInterval(countUp, 1000);
   document.querySelector("#minus").addEventListener("click", function(event){
     counter.textContent = parseInt(counter.textContent) - 1;
   });
-
+//function to count likedNumbers for heart action
+	function likedCounter(number) {
+	let count = 0
+	for (i = 0; i < likedNumbers.length; i ++ ) {
+		if (number == likedNumbers[i]) {
+		count += 1;
+		}
+	}
+	return count
+	}
 // a like button that adds a like for the number that is currently displayed by the timer
 // it needs to know what the counter is at
 // it needs to create a new li
@@ -54,9 +59,9 @@ const likesUl = document.querySelector("ul.likes");
     let likedNumbers = []
     let li = document.createElement("li");
     likedNumbers.push(parseInt(counter.textContent));
-    let counts = {};
-    if (likedNumbers.includes(parseInt(counter.textContent))) {
-      li.textContent = `${counter.textContent} has been liked 1 times`
+    likes = likedCounter(number)
+    if likes > 1{
+      li.textContent = `${counter.textContent} has been liked ${likes} times`
       likesUl.appendChild(li);
     } else {
       li.textContent = `${counter.textContent} has been liked 1 time`
