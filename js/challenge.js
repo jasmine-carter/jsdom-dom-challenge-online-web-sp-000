@@ -5,7 +5,7 @@ function countUp () {
   if (document.querySelector("#pause").textContent == " pause ") {
     //let counter = document.getElementById("counter")
     let c = parseInt(counter.textContent);
-    let c = c+1;
+    c = c+1;
     let counter.textContent = c;
   }
 }
