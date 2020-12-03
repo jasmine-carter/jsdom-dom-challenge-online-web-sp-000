@@ -65,7 +65,7 @@ const likesUl = document.querySelector("ul.likes")
     }
     else {
       li.textContent = `${counter.textContent} has been liked 1 time`
-      likesUl.appendChild(li);  
+      likesUl.appendChild(li);
     }
   })
 });
