@@ -55,10 +55,6 @@ const likesUl = document.querySelector("ul.likes")
     let li = document.createElement("li")
     likedNumbers.push(parseInt(counter.textContent))
     let counts = {}
-    for (let i = 0; i < arr.length; i++) {
-      let num = likedNumbers[i];
-      counts[num] = counts[num] ? counts[num] + 1 : 1;
-    }
     if likedNumber.includes(parseInt(counter.textContent)) {
       li.textContent = `${counter.textContent} has been liked ${counts[num]} times`
       likesUl.appendChild(li);
