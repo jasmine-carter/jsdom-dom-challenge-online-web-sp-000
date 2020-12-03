@@ -75,7 +75,7 @@ const likesUl = document.querySelector("ul.likes");
   }
     let likes = likedCounter(number);
     if (likes > 1 && likedNumbers.includes(number)) {
-      //it updates an existing li
+      //it updates an existing li if one exists for the current liked number
       document.getElementById(`${number}`).textContent = `${counter.textContent} has been liked ${likes} times`;
     } else {
       //it creates a new li
