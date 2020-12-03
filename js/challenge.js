@@ -61,6 +61,7 @@ const likesUl = document.querySelector("ul.likes");
     let number = (parseInt(counter.textContent));
     likedNumbers.push(parseInt(counter.textContent));
 
+//function to get count of times a number has been liked
     function likedCounter(number) {
   	let count = 0
   	for (i = 0; i < likedNumbers.length; i ++ ) {
@@ -70,7 +71,8 @@ const likesUl = document.querySelector("ul.likes");
   	}
   	return count
   }
-    likes = likedCounter(number)
+
+    let likes = likedCounter(number)
     if (likes > 1) {
       li.textContent = `${counter.textContent} has been liked ${likes} times`
       likesUl.appendChild(li);
