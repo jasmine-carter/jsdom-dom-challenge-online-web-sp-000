@@ -40,7 +40,6 @@ document.querySelector("#submit").addEventListener("click", function(event){
   event.preventDefault()
 });
 //it needs to create an p, the append it to parent with content from form
-//div id to add is list
 
 //if button is paused, don't let user increment or decrement
   document.querySelector("#plus").addEventListener("click", function(event){
