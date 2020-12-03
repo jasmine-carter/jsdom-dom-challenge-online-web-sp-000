@@ -60,7 +60,7 @@ const likesUl = document.querySelector("ul.likes")
       counts[num] = counts[num] ? counts[num] + 1 : 1;
     }
     if likedNumber.includes(parseInt(counter.textContent)) {
-      li.textContent = `${counter.textContent} has been liked `${counts[num]}` times`
+      li.textContent = `${counter.textContent} has been liked ${counts[num]} times`
       likesUl.appendChild(li);
     }
     else {
