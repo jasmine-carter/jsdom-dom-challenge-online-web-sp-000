@@ -34,7 +34,7 @@ setInterval(countUp, 1000);
 document.querySelector("#submit").addEventListener("click", function(event){
   let p = document.createElement("p")
   const list = document.getElementById("list")
-  let input = document.getElementById("comment-input").values
+  let input = document.querySelector("#comment-input").value
   p.textContent = input
   list.appendChild(p)
   event.preventDefault()
