@@ -30,6 +30,15 @@ setInterval(countUp, 1000);
     event.preventDefault();
     }
   });
+//logic to add comments lives here
+document.querySelector("#submit").addEventListener("click", function(event){
+  let p = document.createElement("p")
+  let input = document.getElementById("comment-input").values
+  p.textContent = input
+  event.preventDefault()
+})
+//it needs to create an p, the append it to parent with content from form
+//div id to add is list
 
 //if button is paused, don't let user increment or decrement
   document.querySelector("#plus").addEventListener("click", function(event){
