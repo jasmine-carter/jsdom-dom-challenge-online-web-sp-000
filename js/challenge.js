@@ -33,6 +33,7 @@ setInterval(countUp, 1000);
 //logic to add comments lives here
 document.querySelector("#submit").addEventListener("click", function(event){
   let p = document.createElement("p")
+  const list = document.getElementById("list")
   let input = document.getElementById("comment-input").values
   p.textContent = input
   event.preventDefault()
