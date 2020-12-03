@@ -78,7 +78,7 @@ const likesUl = document.querySelector("ul.likes");
 //else create new li
 
     let likes = likedCounter(number)
-    if (likes > 1 && ) {
+    if (likes > 1) {
       li.textContent = `${counter.textContent} has been liked ${likes} times`;
       //li.setAttribute("id", number);
       likesUl.appendChild(li);
