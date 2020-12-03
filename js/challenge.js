@@ -1,5 +1,6 @@
 // A counter that increases by 1 each second and only counts up when button is not paused
 let counter = document.getElementById("counter");
+let likedNumbers = []
 document.addEventListener("DOMContentLoaded", () => {
 function countUp () {
   if (document.querySelector("#pause").textContent == " pause ") {
@@ -57,7 +58,6 @@ setInterval(countUp, 1000);
 const likesUl = document.querySelector("ul.likes");
   document.querySelector("#heart").addEventListener("click", function(event){
     let li = document.createElement("li");
-    let likedNumbers = []
     let number = (parseInt(counter.textContent));
     likedNumbers.push(parseInt(counter.textContent));
 
@@ -78,9 +78,9 @@ const likesUl = document.querySelector("ul.likes");
 //else create new li
 
     let likes = likedCounter(number)
-    if (likes > 1) {
+    if (likes > 1 && ) {
       li.textContent = `${counter.textContent} has been liked ${likes} times`;
-      li.setAttribute("id", number);
+      //li.setAttribute("id", number);
       likesUl.appendChild(li);
     } else {
       li.textContent = `${counter.textContent} has been liked 1 time`;
