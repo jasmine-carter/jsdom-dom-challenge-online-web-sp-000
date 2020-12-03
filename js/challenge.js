@@ -50,8 +50,8 @@ setInterval(countUp, 1000);
 //needs to increment the unique number's like by one every time
 
 const likesUl = document.querySelector("ul.likes")
-  let likedNumbers = []
   document.querySelector("#heart").addEventListener("click", function(event){
+    let likedNumbers = []
     let li = document.createElement("li")
     likedNumbers.push(parseInt(counter.textContent))
     let counts = {}
