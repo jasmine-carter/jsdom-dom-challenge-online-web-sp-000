@@ -71,19 +71,16 @@ const likesUl = document.querySelector("ul.likes");
   		count += 1;
   		}
   	}
-  	return count
+  	return count;
   }
-    let likes = likedCounter(number)
-//if UL has an li with id that == likes
-//update li with matching id text content
-//else create new li
+    let likes = likedCounter(number);
     if (likes > 1 && likedNumbers.includes(number)) {
       //it updates an existing li
       document.getElementById(`${number}`).textContent = `${counter.textContent} has been liked ${likes} times`;
     } else {
       //it creates a new li
       li.textContent = `${counter.textContent} has been liked 1 time`;
-      //li.setAttribute("id", number);
+      li.setAttribute("id", number);
       likesUl.appendChild(li);
     }
   });
