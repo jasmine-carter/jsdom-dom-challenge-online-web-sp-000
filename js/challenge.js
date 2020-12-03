@@ -46,15 +46,26 @@ setInterval(countUp, 1000);
 // it needs to know what the counter is at
 // it needs to create a new li
 // the li needs to have the value of `${counter.textContent} has been likd ${x} time`
-//if distinct number has been liked > 1 time, $times else $time
-// the li needs to get appended to the ul class "likes"
-//need to know the number that is liked, and store it in an array
+//needs to store the unique number
+//needs to increment the unique number's like by one every time
 
 const likesUl = document.querySelector("ul.likes")
-  let unique_number = []
+  let likedNumbers = []
   document.querySelector("#heart").addEventListener("click", function(event){
     let li = document.createElement("li")
-    li.textContent = `${counter.textContent} has been liked 1 time`
-    likesUl.appendChild(li);
+    likedNumbers.push(parseInt(counter.textContent))
+    let counts = {}
+    for (let i = 0; i < arr.length; i++) {
+      let num = likedNumbers[i];
+      counts[num] = counts[num] ? counts[num] + 1 : 1;
+    }
+    if likedNumber.includes(parseInt(counter.textContent)) {
+      li.textContent = `${counter.textContent} has been liked `$counts[num]` times`
+      likesUl.appendChild(li);
+    }
+    else {
+      li.textContent = `${counter.textContent} has been liked 1 time`
+      likesUl.appendChild(li);  
+    }
   })
 });
