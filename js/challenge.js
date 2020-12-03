@@ -46,8 +46,7 @@ setInterval(countUp, 1000);
 		}
 	}
 	return count
-	}
-  let likes =likedCounter(number)
+}
 // a like button that adds a like for the number that is currently displayed by the timer
 // it needs to know what the counter is at
 // it needs to create a new li
@@ -60,6 +59,16 @@ const likesUl = document.querySelector("ul.likes");
     let likedNumbers = []
     let li = document.createElement("li");
     likedNumbers.push(parseInt(counter.textContent));
+    
+    function likedCounter(number) {
+  	let count = 0
+  	for (i = 0; i < likedNumbers.length; i ++ ) {
+  		if (number == likedNumbers[i]) {
+  		count += 1;
+  		}
+  	}
+  	return count
+  }
     likes = likedCounter(number)
     if (likes > 1) {
       li.textContent = `${counter.textContent} has been liked ${likes} times`
